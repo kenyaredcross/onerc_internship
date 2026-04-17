@@ -53,12 +53,3 @@ jspm_packages/
 
 # Aider AI Chat
 .aider*
-
-#github workflow
-.github/workflows/ci.yml
-.github/workflows/cd.yml
-.github/workflows/linter.yml
-.github/workflows/ci-cd.yml
-.github/workflows/ci-cd-qa.yml
-.github/workflows/ci-cd-staging.yml
-.github/workflows/ci-cd-prod.yml

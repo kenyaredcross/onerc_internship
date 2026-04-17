@@ -1,5 +1,0 @@
-include MANIFEST.in
-include setup.py
-recursive-include krcs_internship *.json *.py *.js *.css *.txt
-recursive-include krcs_internship/public *
-recursive-exclude krcs_internship *.pyc
