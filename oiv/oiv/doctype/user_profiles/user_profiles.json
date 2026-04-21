@@ -1,0 +1,416 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-20 11:11:17.367428",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_info_section",
+  "user_id",
+  "first_name",
+  "nationality",
+  "gender",
+  "city",
+  "phone_number",
+  "age",
+  "column_break_xira",
+  "full_name",
+  "last_name",
+  "country",
+  "email",
+  "date_of_birth",
+  "area_of_residency",
+  "profile_photo",
+  "emergency_contacts_section",
+  "f_name",
+  "occupation",
+  "column_break_wjwi",
+  "phone_number_1",
+  "relationship_type",
+  "skills_and_interests_section",
+  "specify_your_skill_set",
+  "column_break_ebyv",
+  "outline_your_interests",
+  "attachmentinternship_info_section",
+  "academic_level",
+  "course",
+  "institution_name",
+  "work_supervisor",
+  "lecturers_name",
+  "column_break_exdi",
+  "year_of_study",
+  "type",
+  "department",
+  "campus",
+  "lecturers_contact",
+  "section_break_jjed",
+  "department_1",
+  "supervisor",
+  "column_break_abxe",
+  "work_station",
+  "duration",
+  "documents_section",
+  "school_letter",
+  "insurance",
+  "school_vertificates",
+  "column_break_gums",
+  "copy_of_national_id",
+  "cv",
+  "human_resource_letter",
+  "intern_activity_section",
+  "date_of_activity",
+  "activity",
+  "project_title",
+  "description_of_activity",
+  "skills_acquired",
+  "challenges",
+  "next_steps",
+  "support_needed",
+  "intern"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Autocomplete",
+   "label": "user ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Select",
+   "label": "Nationality",
+   "options": "\nKenya\nForeigner"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone number"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_xira",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "personal_info_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "emergency_contacts_section",
+   "fieldtype": "Section Break",
+   "label": "Emergency Contacts"
+  },
+  {
+   "fieldname": "f_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "column_break_wjwi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone_number_1",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "relationship_type",
+   "fieldtype": "Select",
+   "label": "Relationship Type",
+   "options": "\nFather\nMother\nSibling\nSpouse"
+  },
+  {
+   "fieldname": "area_of_residency",
+   "fieldtype": "Data",
+   "label": "Area of Residency"
+  },
+  {
+   "fieldname": "campus",
+   "fieldtype": "Data",
+   "label": "Campus"
+  },
+  {
+   "fieldname": "attachmentinternship_info_section",
+   "fieldtype": "Section Break",
+   "label": "School Details"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "work_supervisor",
+   "fieldtype": "Link",
+   "label": "Work supervisor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nIndustrial Attachment\nInternship\nVolunteer"
+  },
+  {
+   "fieldname": "column_break_exdi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale"
+  },
+  {
+   "fieldname": "profile_photo",
+   "fieldtype": "Attach Image",
+   "label": "Profile Photo"
+  },
+  {
+   "fieldname": "academic_level",
+   "fieldtype": "Select",
+   "label": "Academic Level",
+   "options": "\nCertificate\nDiploma\nDegree"
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Data",
+   "label": "Course"
+  },
+  {
+   "fieldname": "work_station",
+   "fieldtype": "Select",
+   "label": "Work Station",
+   "options": "\nHeadquarters\nIOMe 001\nIOMe 005\nMombasa\nKwale\nKilifi\nTana River\nLamu\nTaita-Taveta\nGarissa\nWajir\nMandera\nMarsabit\nIsiolo\nMeru\nTharaka-Nithi\nEmbu\nKitui\nMachakos\nMakueni\nNyandarua\nNyeri\nKirinyaga\nMurang\u2019a\nKiambu\nTurkana\nWest Pokot\nSamburu\nTrans Nzoia\nUasin Gishu\nElgeyo-Marakwet\nNandi\nBaringo\nLaikipia\nNakuru\nNarok\nKajiado\nKericho\nBomet\nKakamega\nVihiga\nBungoma\nBusia\nSiaya\nKisumu\nHoma Bay\nMigori\nKisii\nNyamira\nNairobi City"
+  },
+  {
+   "fieldname": "institution_name",
+   "fieldtype": "Data",
+   "label": "Institution Name"
+  },
+  {
+   "fieldname": "lecturers_name",
+   "fieldtype": "Data",
+   "label": "Lecturer's Name"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Duration",
+   "label": "Department"
+  },
+  {
+   "fieldname": "lecturers_contact",
+   "fieldtype": "Phone",
+   "label": "Lecturer's Contact"
+  },
+  {
+   "fieldname": "section_break_jjed",
+   "fieldtype": "Section Break",
+   "label": "Attachment/Internship Details"
+  },
+  {
+   "fieldname": "year_of_study",
+   "fieldtype": "Data",
+   "label": "Year of Study"
+  },
+  {
+   "fieldname": "department_1",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_abxe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "school_letter",
+   "fieldtype": "Attach",
+   "label": "School Letter"
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Attach",
+   "label": "Insurance"
+  },
+  {
+   "fieldname": "school_vertificates",
+   "fieldtype": "Attach",
+   "label": "School Vertificates"
+  },
+  {
+   "fieldname": "column_break_gums",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "copy_of_national_id",
+   "fieldtype": "Attach",
+   "label": "Copy of National ID"
+  },
+  {
+   "fieldname": "cv",
+   "fieldtype": "Attach",
+   "label": "CV"
+  },
+  {
+   "fieldname": "human_resource_letter",
+   "fieldtype": "Attach",
+   "label": "Human Resource Letter"
+  },
+  {
+   "fieldname": "skills_and_interests_section",
+   "fieldtype": "Section Break",
+   "label": "Skills and Interests"
+  },
+  {
+   "fieldname": "specify_your_skill_set",
+   "fieldtype": "Long Text",
+   "label": "Specify your skill set"
+  },
+  {
+   "fieldname": "column_break_ebyv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "outline_your_interests",
+   "fieldtype": "Long Text",
+   "label": "Outline your Interests"
+  },
+  {
+   "fieldname": "intern_activity_section",
+   "fieldtype": "Section Break",
+   "label": "Intern Activity"
+  },
+  {
+   "fieldname": "date_of_activity",
+   "fieldtype": "Date",
+   "label": "Date of activity"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Data",
+   "label": "Activity"
+  },
+  {
+   "fieldname": "project_title",
+   "fieldtype": "Data",
+   "label": "Project Title"
+  },
+  {
+   "fieldname": "description_of_activity",
+   "fieldtype": "Text Editor",
+   "label": "Description of Activity"
+  },
+  {
+   "fieldname": "skills_acquired",
+   "fieldtype": "Text Editor",
+   "label": "Skills Acquired"
+  },
+  {
+   "fieldname": "challenges",
+   "fieldtype": "Text Editor",
+   "label": "Challenges"
+  },
+  {
+   "fieldname": "next_steps",
+   "fieldtype": "Data",
+   "label": "Next Steps"
+  },
+  {
+   "fieldname": "support_needed",
+   "fieldtype": "Data",
+   "label": "Support Needed"
+  },
+  {
+   "fieldname": "intern",
+   "fieldtype": "Link",
+   "label": "Intern",
+   "options": "user profiles"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-20 21:45:54.002789",
+ "modified_by": "Administrator",
+ "module": "Oiv",
+ "name": "user profiles",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

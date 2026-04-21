@@ -1,7 +1,7 @@
-app_name = "onerc_iv"
-app_title = "Onerc Iv"
+app_name = "oiv"
+app_title = "Oiv"
 app_publisher = "emm"
-app_description = "onerc internship and volunteer platform"
+app_description = "onerc intern and volunteer platfrom"
 app_email = "matolojr@gmail.com"
 app_license = "mit"
 
@@ -13,11 +13,11 @@ app_license = "mit"
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{
-# 		"name": "onerc_iv",
-# 		"logo": "/assets/onerc_iv/logo.png",
-# 		"title": "Onerc Iv",
-# 		"route": "/onerc_iv",
-# 		"has_permission": "onerc_iv.api.permission.has_app_permission"
+# 		"name": "oiv",
+# 		"logo": "/assets/oiv/logo.png",
+# 		"title": "Oiv",
+# 		"route": "/oiv",
+# 		"has_permission": "oiv.api.permission.has_app_permission"
 # 	}
 # ]
 
@@ -25,15 +25,15 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/onerc_iv/css/onerc_iv.css"
-# app_include_js = "/assets/onerc_iv/js/onerc_iv.js"
+# app_include_css = "/assets/oiv/css/oiv.css"
+# app_include_js = "/assets/oiv/js/oiv.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/onerc_iv/css/onerc_iv.css"
-# web_include_js = "/assets/onerc_iv/js/onerc_iv.js"
+# web_include_css = "/assets/oiv/css/oiv.css"
+# web_include_js = "/assets/oiv/js/oiv.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "onerc_iv/public/scss/website"
+# website_theme_scss = "oiv/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
@@ -51,7 +51,7 @@ app_license = "mit"
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "onerc_iv/public/icons.svg"
+# app_include_icons = "oiv/public/icons.svg"
 
 # Home Pages
 # ----------
@@ -70,57 +70,48 @@ app_license = "mit"
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
 
-# automatically load and sync documents of this doctype from downstream apps
-# importable_doctypes = [doctype_1]
-
 # Jinja
 # ----------
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": "onerc_iv.utils.jinja_methods",
-# 	"filters": "onerc_iv.utils.jinja_filters"
+# 	"methods": "oiv.utils.jinja_methods",
+# 	"filters": "oiv.utils.jinja_filters"
 # }
 
 # Installation
 # ------------
 
-# before_install = "onerc_iv.install.before_install"
-# after_install = "onerc_iv.install.after_install"
+# before_install = "oiv.install.before_install"
+# after_install = "oiv.install.after_install"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "onerc_iv.uninstall.before_uninstall"
-# after_uninstall = "onerc_iv.uninstall.after_uninstall"
+# before_uninstall = "oiv.uninstall.before_uninstall"
+# after_uninstall = "oiv.uninstall.after_uninstall"
 
 # Integration Setup
 # ------------------
 # To set up dependencies/integrations with other apps
 # Name of the app being installed is passed as an argument
 
-# before_app_install = "onerc_iv.utils.before_app_install"
-# after_app_install = "onerc_iv.utils.after_app_install"
+# before_app_install = "oiv.utils.before_app_install"
+# after_app_install = "oiv.utils.after_app_install"
 
 # Integration Cleanup
 # -------------------
 # To clean up dependencies/integrations with other apps
 # Name of the app being uninstalled is passed as an argument
 
-# before_app_uninstall = "onerc_iv.utils.before_app_uninstall"
-# after_app_uninstall = "onerc_iv.utils.after_app_uninstall"
-
-# Build
-# ------------------
-# To hook into the build process
-
-# after_build = "onerc_iv.build.after_build"
+# before_app_uninstall = "oiv.utils.before_app_uninstall"
+# after_app_uninstall = "oiv.utils.after_app_uninstall"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "onerc_iv.notifications.get_notification_config"
+# notification_config = "oiv.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -132,6 +123,14 @@ app_license = "mit"
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
+# }
+
+# DocType Class
+# ---------------
+# Override standard doctype classes
+
+# override_doctype_class = {
+# 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
 # Document Events
@@ -151,47 +150,39 @@ app_license = "mit"
 
 # scheduler_events = {
 # 	"all": [
-# 		"onerc_iv.tasks.all"
+# 		"oiv.tasks.all"
 # 	],
 # 	"daily": [
-# 		"onerc_iv.tasks.daily"
+# 		"oiv.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"onerc_iv.tasks.hourly"
+# 		"oiv.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"onerc_iv.tasks.weekly"
+# 		"oiv.tasks.weekly"
 # 	],
 # 	"monthly": [
-# 		"onerc_iv.tasks.monthly"
+# 		"oiv.tasks.monthly"
 # 	],
 # }
 
 # Testing
 # -------
 
-# before_tests = "onerc_iv.install.before_tests"
-
-# Extend DocType Class
-# ------------------------------
-#
-# Specify custom mixins to extend the standard doctype controller.
-# extend_doctype_class = {
-# 	"Task": "onerc_iv.custom.task.CustomTaskMixin"
-# }
+# before_tests = "oiv.install.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "onerc_iv.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "oiv.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-# 	"Task": "onerc_iv.task.get_dashboard_data"
+# 	"Task": "oiv.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -205,13 +196,13 @@ app_license = "mit"
 
 # Request Events
 # ----------------
-# before_request = ["onerc_iv.utils.before_request"]
-# after_request = ["onerc_iv.utils.after_request"]
+# before_request = ["oiv.utils.before_request"]
+# after_request = ["oiv.utils.after_request"]
 
 # Job Events
 # ----------
-# before_job = ["onerc_iv.utils.before_job"]
-# after_job = ["onerc_iv.utils.after_job"]
+# before_job = ["oiv.utils.before_job"]
+# after_job = ["oiv.utils.after_job"]
 
 # User Data Protection
 # --------------------
@@ -241,14 +232,11 @@ app_license = "mit"
 # --------------------------------
 
 # auth_hooks = [
-# 	"onerc_iv.auth.validate"
+# 	"oiv.auth.validate"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-export_python_type_annotations = True
-
-# Require all whitelisted methods to have type annotations
-require_type_annotated_api_methods = True
+# export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs

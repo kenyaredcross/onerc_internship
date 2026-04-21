@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-20 21:52:16.035857",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "department",
+  "partcipant",
+  "status",
+  "linked_weekly_report",
+  "supervisor_comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "partcipant",
+   "fieldtype": "Link",
+   "label": "Partcipant",
+   "options": "user profiles"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nSubmitted\nApproved\nRejected\nFlagged for HR"
+  },
+  {
+   "fieldname": "linked_weekly_report",
+   "fieldtype": "Link",
+   "label": "Linked Weekly Report",
+   "options": "weekly reports"
+  },
+  {
+   "fieldname": "supervisor_comments",
+   "fieldtype": "Long Text",
+   "label": "Supervisor Comments"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-20 21:57:20.420872",
+ "modified_by": "Administrator",
+ "module": "Oiv",
+ "name": "onerc oiv timesheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,6 +1,6 @@
-### Onerc Iv
+### Oiv
 
-onerc internship and volunteer platform
+onerc intern and volunteer platfrom
 
 ### Installation
 
@@ -9,7 +9,7 @@ You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 ```bash
 cd $PATH_TO_YOUR_BENCH
 bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app onerc_iv
+bench install-app oiv
 ```
 
 ### Contributing
@@ -17,7 +17,7 @@ bench install-app onerc_iv
 This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
 
 ```bash
-cd apps/onerc_iv
+cd apps/oiv
 pre-commit install
 ```
 
