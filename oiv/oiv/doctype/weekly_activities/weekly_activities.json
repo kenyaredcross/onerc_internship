@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-22 10:32:00.102519",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activities_section",
+  "date",
+  "title",
+  "activity_description",
+  "skills_applied",
+  "hours_spent",
+  "reflections_section",
+  "challenges_faced",
+  "key_learnings",
+  "support_needed",
+  "supervisor_section",
+  "comments",
+  "rating",
+  "reviewd_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "activities_section",
+   "fieldtype": "Section Break",
+   "label": "Activities"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "activity_description",
+   "fieldtype": "Text",
+   "label": "Activity Description"
+  },
+  {
+   "fieldname": "skills_applied",
+   "fieldtype": "Small Text",
+   "label": "Skills Applied"
+  },
+  {
+   "fieldname": "hours_spent",
+   "fieldtype": "Float",
+   "label": "Hours Spent"
+  },
+  {
+   "fieldname": "reflections_section",
+   "fieldtype": "Section Break",
+   "label": "Reflections"
+  },
+  {
+   "fieldname": "challenges_faced",
+   "fieldtype": "Text Editor",
+   "label": "Challenges Faced"
+  },
+  {
+   "fieldname": "key_learnings",
+   "fieldtype": "Text Editor",
+   "label": "Key Learnings"
+  },
+  {
+   "fieldname": "support_needed",
+   "fieldtype": "Text Editor",
+   "label": "Support Needed"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "supervisor_section",
+   "fieldtype": "Section Break",
+   "label": "Supervisor"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "reviewd_on",
+   "fieldtype": "Date",
+   "label": "Reviewd on"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-22 10:54:54.954165",
+ "modified_by": "Administrator",
+ "module": "Oiv",
+ "name": "Weekly Activities",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

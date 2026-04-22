@@ -5,47 +5,81 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "intern",
   "department",
-  "partcipant",
+  "week_start_date",
+  "week_end_date",
+  "linked_weekly_reports",
+  "total_hours",
   "status",
-  "linked_weekly_report",
-  "supervisor_comments"
+  "supervisor",
+  "supervisor_comments",
+  "hr_notes"
  ],
  "fields": [
   {
    "fieldname": "department",
    "fieldtype": "Link",
    "label": "Department",
-   "options": "Department"
-  },
-  {
-   "fieldname": "partcipant",
-   "fieldtype": "Link",
-   "label": "Partcipant",
-   "options": "user profiles"
+   "options": "Department",
+   "read_only": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nDraft\nSubmitted\nApproved\nRejected\nFlagged for HR"
-  },
-  {
-   "fieldname": "linked_weekly_report",
-   "fieldtype": "Link",
-   "label": "Linked Weekly Report",
-   "options": "weekly reports"
+   "options": "\nDraft\nSubmitted\nApproved\nRejected\nFlagged for HR",
+   "read_only": 1
   },
   {
    "fieldname": "supervisor_comments",
    "fieldtype": "Long Text",
    "label": "Supervisor Comments"
+  },
+  {
+   "fieldname": "intern",
+   "fieldtype": "Link",
+   "label": "Intern",
+   "options": "user profiles"
+  },
+  {
+   "fieldname": "week_start_date",
+   "fieldtype": "Date",
+   "label": "Week Start Date"
+  },
+  {
+   "fieldname": "week_end_date",
+   "fieldtype": "Date",
+   "label": "Week End Date"
+  },
+  {
+   "fieldname": "linked_weekly_reports",
+   "fieldtype": "Link",
+   "label": "Linked Weekly Reports",
+   "options": "weekly reports"
+  },
+  {
+   "fieldname": "total_hours",
+   "fieldtype": "Float",
+   "label": "Total Hours"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "hr_notes",
+   "fieldtype": "Long Text",
+   "label": "HR Notes",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-20 21:57:20.420872",
+ "modified": "2026-04-22 11:10:49.216886",
  "modified_by": "Administrator",
  "module": "Oiv",
  "name": "onerc oiv timesheet",

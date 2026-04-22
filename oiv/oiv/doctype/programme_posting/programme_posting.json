@@ -18,13 +18,13 @@
    "fieldname": "opening",
    "fieldtype": "Link",
    "label": "opening",
-   "options": "Job Opening Template"
+   "options": "Job Opening"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-20 21:50:28.300114",
+ "modified": "2026-04-21 13:51:37.660226",
  "modified_by": "Administrator",
  "module": "Oiv",
  "name": "Programme Posting",

@@ -6,7 +6,11 @@
  "engine": "InnoDB",
  "field_order": [
   "title_section",
-  "date_and_time"
+  "intern_name",
+  "department",
+  "supervisor",
+  "status",
+  "activity"
  ],
  "fields": [
   {
@@ -15,15 +19,40 @@
    "label": "Title"
   },
   {
-   "fieldname": "date_and_time",
-   "fieldtype": "Datetime",
-   "label": "Date and time"
+   "fieldname": "intern_name",
+   "fieldtype": "Link",
+   "label": "Intern Name",
+   "options": "user profiles"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Table",
+   "label": "Activity",
+   "options": "Weekly Activities"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nSubmitted\nReviewed\nApproved\nReturned"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-20 16:29:46.099876",
+ "modified": "2026-04-22 10:52:53.302863",
  "modified_by": "Administrator",
  "module": "Oiv",
  "name": "weekly reports",

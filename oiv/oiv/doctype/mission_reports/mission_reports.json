@@ -5,37 +5,132 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "title",
+  "intern",
+  "mission_title",
+  "deployment",
+  "project",
   "date",
-  "time",
-  "report"
+  "mission_end_date",
+  "location",
+  "status",
+  "mission_background_section",
+  "report",
+  "activities_undertaken",
+  "findings_and_observations",
+  "challenges",
+  "recommendations",
+  "lessons_learned",
+  "approval_section",
+  "submitted_to",
+  "comments",
+  "approved_on"
  ],
  "fields": [
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "label": "Title"
-  },
-  {
    "fieldname": "date",
    "fieldtype": "Date",
-   "label": "Date"
-  },
-  {
-   "fieldname": "time",
-   "fieldtype": "Time",
-   "label": "Time"
+   "label": "Mission Start Date"
   },
   {
    "fieldname": "report",
    "fieldtype": "Text Editor",
    "label": "Report"
+  },
+  {
+   "fieldname": "intern",
+   "fieldtype": "Data",
+   "label": "Intern"
+  },
+  {
+   "fieldname": "mission_title",
+   "fieldtype": "Data",
+   "label": "Mission Title"
+  },
+  {
+   "fieldname": "deployment",
+   "fieldtype": "Link",
+   "label": "Deployment",
+   "options": "Personnel Deployment Request"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Personnel Deployment Request"
+  },
+  {
+   "fieldname": "mission_end_date",
+   "fieldtype": "Date",
+   "label": "Mission End Date"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Administrative Location"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nSubmitted\nApproved"
+  },
+  {
+   "fieldname": "mission_background_section",
+   "fieldtype": "Section Break",
+   "label": "Mission Background"
+  },
+  {
+   "fieldname": "activities_undertaken",
+   "fieldtype": "Text Editor",
+   "label": "Activities Undertaken"
+  },
+  {
+   "fieldname": "findings_and_observations",
+   "fieldtype": "Text Editor",
+   "label": "Findings and Observations"
+  },
+  {
+   "fieldname": "challenges",
+   "fieldtype": "Text Editor",
+   "label": "Challenges"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Text Editor",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "lessons_learned",
+   "fieldtype": "Text Editor",
+   "label": "Lessons Learned"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "fieldname": "submitted_to",
+   "fieldtype": "Link",
+   "label": "Submitted To",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Date",
+   "label": "Approved on"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-20 16:31:23.808215",
+ "modified": "2026-04-22 11:05:49.298402",
  "modified_by": "Administrator",
  "module": "Oiv",
  "name": "mission reports",
