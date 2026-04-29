@@ -1,10 +1,4 @@
 # OIV ONERC Intern & Volunteer Platform
-
-**Version:** 0.0.1
-**Author:** emm (matolojr@gmail.com)
-**License:** MIT
-**Framework:** Frappe v15+ / ERPNext
-
 > A custom Frappe application for managing ONERC interns and volunteers covering profile onboarding, weekly activity reporting, field mission documentation and timesheet tracking.
 
 ---
