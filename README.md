@@ -6,6 +6,8 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [Current Status](#current-status)
+- [Prerequisites Needed](#prerequisites-needed)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Module & App Registration](#module--app-registration)
@@ -26,9 +28,91 @@
 
 ---
 
+## Installation
+
+### Prerequisites
+
+- [Frappe Bench](https://github.com/frappe/bench) installed and configured
+- A Frappe v15+ site with the ERP stack this app depends on
+- Python 3.10 or newer
+- Node.js 18+ and npm or yarn for frontend asset builds
+- MariaDB/MySQL compatible with your Frappe bench
+- Access to the linked DocTypes used by the app, especially `Department`, `Employee`, `Country`, and `Job Opening`
+- If your bench separates HR features into a dedicated app, install the HR app that provides `Employee`, `Department`, and `Job Opening`
+- `pre-commit` for contributor workflows
+
+### Steps
+
+```bash
+cd $PATH_TO_YOUR_BENCH
+
+bench get-app $URL_OF_THIS_REPO --branch main
+
+bench install-app oiv
+
+bench --site <your-site> migrate
+```
+
+If you are setting up a fresh bench, install or enable the parent ERP app first so the linked DocTypes exist before you migrate this app.
+
+---
+
 ## Overview
 
-OIV digitises the intern and volunteer lifecycle at ONERC. It is built entirely on the Frappe framework and integrates with ERPNext's existing `Department`, `Employee` and `Job Opening` doctypes.
+OIV digitises the intern and volunteer lifecycle at ONERC. It is built on the Frappe framework and stores the main data model in custom DocTypes for profiles, weekly reporting, field missions, and timesheet review.
+
+The app currently behaves more like a schema-first prototype than a finished workflow application:
+
+- The DocType JSON files define the structure and permissions.
+- Python controllers are empty stubs.
+- Form scripts are commented out.
+- Tests are placeholder files.
+- Several fields depend on external DocTypes that must already exist in the bench.
+
+---
+
+## Current Status
+
+The project is in active early development. The most complete parts of the codebase are the DocType schemas and permission tables. Most server-side behavior still needs to be implemented, including computed fields, workflow transitions, validation, and role-specific controls.
+
+This means the repository is useful as a blueprint for the data model, but it is not yet a finished operational system for interns, supervisors, or HR users.
+
+---
+
+## Prerequisites Needed
+
+### Runtime prerequisites
+
+- Frappe Bench with a Frappe v15+ site
+- ERPNext or the matching HR app that provides `Department`, `Employee`, and `Job Opening`
+- Python 3.10+
+- Node.js 18+ for frontend asset builds
+- MariaDB/MySQL
+- Core Frappe doctypes, including `Country`
+
+### Data prerequisites
+
+- `Department` records for the organization structure used in weekly reports, profiles, and timesheets
+- `Employee` records for supervisors and approval routing
+- `Job Opening` records if you want `Programme Posting` to point at an actual vacancy
+- `Country` records for foreign-profile entries
+- Any custom doctypes referenced by the schema but not defined here, especially `Personnel Deployment Request` and `Administrative Location`
+
+### Development prerequisites
+
+- `pre-commit` to run the configured formatters and linters
+- A working shell environment inside the bench root
+- Optional but recommended: access to the app's current doctypes in developer mode so you can validate form behavior while iterating
+
+---
+
+The platform is intended for four roles: **Intern**, **Supervisor**, **HR Manager**, and **System Manager**. Access control exists in the DocType permission tables, but some important actions still require controller or workflow logic that is not present yet.
+
+---
+
+## Overview
+
+OIV digitises the intern and volunteer lifecycle at ONERC. It is built entirely on the Frappe framework and integrates with the organization and HR doctypes that usually come from ERPNext or the matching HR app, including `Department`, `Employee`, and `Job Opening`.
 
 The platform supports four roles **Intern**, **Supervisor**, **HR Manager** and **System Manager** each with distinct access levels across six custom DocTypes.
 
@@ -125,14 +209,6 @@ oiv/                               # Bench app root
 
 **`hooks.py`** registers the app with Frappe. Every optional hook (doc_events, scheduler_events, CSS/JS includes, permission hooks, install hooks, website generators, jinja, notifications, etc.) is present as commented-out boilerplate nothing is active beyond the five required metadata fields:
 
-```python
-app_name        = "oiv"
-app_title       = "Oiv"
-app_publisher   = "emm"
-app_description = "onerc intern and volunteer platfrom"
-app_email       = "matolojr@gmail.com"
-app_license     = "mit"
-```
 
 **`modules.txt`** registers a single Frappe module named `Oiv`.
 
@@ -472,10 +548,10 @@ The app references DocTypes not defined within it. They must exist in a parent a
 
 | Referenced DocType | Used In | Source |
 |---|---|---|
-| `Department` | User Profiles, Weekly Reports, OIV Timesheet | ERPNext / Frappe HR |
-| `Employee` | User Profiles, Weekly Reports, Mission Reports, OIV Timesheet | ERPNext / Frappe HR |
+| `Department` | User Profiles, Weekly Reports, OIV Timesheet | ERPNext / HR app |
+| `Employee` | User Profiles, Weekly Reports, Mission Reports, OIV Timesheet | ERPNext / HR app |
 | `Country` | User Profiles | Frappe core |
-| `Job Opening` | Programme Posting | ERPNext |
+| `Job Opening` | Programme Posting | ERPNext / HR app |
 | `Personnel Deployment Request` | Mission Reports (`deployment` + `project` fields) | **Not in this app or standard ERPNext must be created** |
 | `Administrative Location` | Mission Reports (`location` field) | **Not in this app or standard ERPNext must be created** |
 
@@ -538,42 +614,6 @@ All files: LF line endings, UTF-8, trailing whitespace trimmed. Non-JSON files: 
 | Lint | eslint v8.44.0 (quiet) | JS only (with exclusions) |
 
 CI autoupdate schedule: weekly.
-
----
-
-## Installation
-
-### Prerequisites
-
-- [Frappe Bench](https://github.com/frappe/bench) installed and configured
-- ERPNext v15+ on your site (required for `Department`, `Employee`, `Job Opening`)
-- Python ≥ 3.10
-- Node.js (for frontend asset building)
-
-### Steps
-
-```bash
-cd $PATH_TO_YOUR_BENCH
-
-bench get-app $URL_OF_THIS_REPO --branch develop
-
-bench install-app oiv
-
-bench --site <your-site> migrate
-```
-
----
-
-## Contributing
-
-This app uses `pre-commit` for code formatting and linting. Install and enable it before making any commits:
-
-```bash
-cd apps/oiv
-pre-commit install
-```
-
-All Python code must pass `ruff` linting and `ruff-format`. All JS/Vue/SCSS must pass `eslint` and `prettier`. Commits that fail any hook will be blocked.
 
 ---
 
