@@ -5,6 +5,23 @@ app_description = "onerc intern and volunteer platfrom"
 app_email = "matolojr@gmail.com"
 app_license = "mit"
 
+fixtures = ["Web Form"]
+fixtures = ["Web Page"]
+fixtures = [
+    "Web Form",
+    "Web Page",
+    "Website Settings"
+]
+
+fixtures = [
+    {
+        "doctype": "Workflow",
+        "filters": [
+            ["document_type", "=", "Timesheet"]
+        ]
+    }
+]
+
 # Apps
 # ------------------
 
