@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "COUR-.YYYY.-.#####",
+ "creation": "2026-08-03 23:00:26.601767",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "course_details_section",
+  "course_name",
+  "academic_level",
+  "column_break_zrhk",
+  "course_code",
+  "duration_years"
+ ],
+ "fields": [
+  {
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "label": "Course Name"
+  },
+  {
+   "fieldname": "academic_level",
+   "fieldtype": "Select",
+   "label": "Academic Level",
+   "options": "Certificate\nDiploma\nHigher Diploma\nBachelor's Degree\nPostgraduate Diploma\nMaster's Degree\nDoctorate (PhD)\nOther"
+  },
+  {
+   "fieldname": "column_break_zrhk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "course_code",
+   "fieldtype": "Data",
+   "label": "Course Code"
+  },
+  {
+   "fieldname": "duration_years",
+   "fieldtype": "Int",
+   "label": "Duration (Years)"
+  },
+  {
+   "fieldname": "course_details_section",
+   "fieldtype": "Section Break",
+   "label": "Course Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-03 23:02:35.814482",
+ "modified_by": "Administrator",
+ "module": "Internship Management",
+ "name": "Course",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

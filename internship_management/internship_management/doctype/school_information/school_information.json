@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "institution_name",
+ "creation": "2026-08-03 23:16:14.415521",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "institution_name",
+  "institution_code",
+  "website",
+  "column_break_ecao",
+  "institution_type",
+  "email",
+  "phone_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "institution_name",
+   "fieldtype": "Data",
+   "label": "School Name"
+  },
+  {
+   "fieldname": "institution_code",
+   "fieldtype": "Data",
+   "label": "Institution Code"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "column_break_ecao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "institution_type",
+   "fieldtype": "Select",
+   "label": "School Type",
+   "options": "Private\nPublic"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-03 23:20:41.515818",
+ "modified_by": "Administrator",
+ "module": "Internship Management",
+ "name": "School Information",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

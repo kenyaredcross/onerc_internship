@@ -1,0 +1,325 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "APP-.YYYY.-.#####",
+ "creation": "2026-08-03 22:40:06.761460",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_tab",
+  "section_break_8and",
+  "amended_from",
+  "first_name",
+  "email_address",
+  "gender",
+  "emergency_contact_name",
+  "column_break_wsvf",
+  "last_name",
+  "phone_number",
+  "physical_address",
+  "emergency_contact_phone_number",
+  "academic_information_tab",
+  "education_section",
+  "school_information",
+  "course",
+  "column_break_cnxo",
+  "start_date_of_study",
+  "expected_graduation_date",
+  "internship_information_tab",
+  "placement_details_section",
+  "internship_type",
+  "internship_start_date",
+  "internship_end_date",
+  "column_break_pxor",
+  "assigned_department",
+  "assigned_branch",
+  "supervisor",
+  "required_documents_tab",
+  "supporting_documents_section",
+  "national_id__passport_copy",
+  "school_introduction_letter",
+  "insurance_cover",
+  "column_break_yanb",
+  "curriculum_vitae_cv",
+  "academic_transcript",
+  "other_supporting_documents",
+  "internship_expectations_tab",
+  "expectations_section",
+  "internship_expectations",
+  "status_tab",
+  "internship_status_section",
+  "status",
+  "column_break_rvgj",
+  "active"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_8and",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Intern Profile",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Female\nMale\nOthers"
+  },
+  {
+   "fieldname": "emergency_contact_name",
+   "fieldtype": "Data",
+   "label": "Emergency Contact Name"
+  },
+  {
+   "fieldname": "column_break_wsvf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "physical_address",
+   "fieldtype": "Small Text",
+   "label": "Physical Address"
+  },
+  {
+   "fieldname": "emergency_contact_phone_number",
+   "fieldtype": "Data",
+   "label": "Emergency Contact Phone Number"
+  },
+  {
+   "fieldname": "basic_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "academic_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Academic Information"
+  },
+  {
+   "fieldname": "education_section",
+   "fieldtype": "Section Break",
+   "label": "Education"
+  },
+  {
+   "fieldname": "start_date_of_study",
+   "fieldtype": "Date",
+   "label": "Start Date of Study"
+  },
+  {
+   "fieldname": "expected_graduation_date",
+   "fieldtype": "Date",
+   "label": "Expected Graduation Date"
+  },
+  {
+   "fieldname": "column_break_cnxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "internship_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Internship Information"
+  },
+  {
+   "fieldname": "placement_details_section",
+   "fieldtype": "Section Break",
+   "label": "Placement Details"
+  },
+  {
+   "fieldname": "internship_type",
+   "fieldtype": "Select",
+   "label": "Internship Type",
+   "options": "Internship\nIndustrial Attachment"
+  },
+  {
+   "fieldname": "internship_start_date",
+   "fieldtype": "Date",
+   "label": "Internship Start Date"
+  },
+  {
+   "fieldname": "internship_end_date",
+   "fieldtype": "Date",
+   "label": "Internship End Date"
+  },
+  {
+   "fieldname": "column_break_pxor",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assigned_department",
+   "fieldtype": "Link",
+   "label": "Assigned Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "assigned_branch",
+   "fieldtype": "Link",
+   "label": "Assigned Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "required_documents_tab",
+   "fieldtype": "Tab Break",
+   "label": "Required Documents"
+  },
+  {
+   "fieldname": "supporting_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Supporting Documents"
+  },
+  {
+   "fieldname": "national_id__passport_copy",
+   "fieldtype": "Attach",
+   "label": "National ID / Passport Copy"
+  },
+  {
+   "fieldname": "school_introduction_letter",
+   "fieldtype": "Attach",
+   "label": "School Introduction Letter"
+  },
+  {
+   "fieldname": "insurance_cover",
+   "fieldtype": "Attach",
+   "label": "Insurance Cover"
+  },
+  {
+   "fieldname": "column_break_yanb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "curriculum_vitae_cv",
+   "fieldtype": "Attach",
+   "label": "Curriculum Vitae (CV)"
+  },
+  {
+   "fieldname": "academic_transcript",
+   "fieldtype": "Attach",
+   "label": "Academic Transcript"
+  },
+  {
+   "fieldname": "other_supporting_documents",
+   "fieldtype": "Attach",
+   "label": "Other Supporting Documents"
+  },
+  {
+   "fieldname": "internship_expectations_tab",
+   "fieldtype": "Tab Break",
+   "label": "Internship Expectations"
+  },
+  {
+   "fieldname": "expectations_section",
+   "fieldtype": "Section Break",
+   "label": "Expectations"
+  },
+  {
+   "fieldname": "internship_expectations",
+   "fieldtype": "Table",
+   "label": "Internship Expectations",
+   "options": "Internship Expectation"
+  },
+  {
+   "fieldname": "status_tab",
+   "fieldtype": "Tab Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "internship_status_section",
+   "fieldtype": "Section Break",
+   "label": "Internship Status"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nAssigned\nActive\nCompleted\nTerminated"
+  },
+  {
+   "fieldname": "column_break_rvgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "school_information",
+   "fieldtype": "Link",
+   "label": "School Information",
+   "options": "School Information"
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "label": "Course",
+   "options": "Course"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Supervisor"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-03 23:23:46.445724",
+ "modified_by": "Administrator",
+ "module": "Internship Management",
+ "name": "Intern Profile",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
