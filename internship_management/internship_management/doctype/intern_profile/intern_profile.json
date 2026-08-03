@@ -276,7 +276,7 @@
   {
    "fieldname": "school_information",
    "fieldtype": "Link",
-   "label": "School Information",
+   "label": "Institution",
    "options": "School Information"
   },
   {
@@ -296,7 +296,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-08-03 23:23:46.445724",
+ "modified": "2026-08-03 23:31:20.459575",
  "modified_by": "Administrator",
  "module": "Internship Management",
  "name": "Intern Profile",
