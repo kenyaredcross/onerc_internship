@@ -8,11 +8,14 @@
  "engine": "InnoDB",
  "field_order": [
   "supervisor_details_section",
+  "salutation",
   "supervisor_name",
   "email_address",
   "institution",
   "column_break_kuyc",
   "phone_number",
+  "title",
+  "school_department",
   "gender"
  ],
  "fields": [
@@ -51,12 +54,28 @@
    "fieldtype": "Link",
    "label": "Institution",
    "options": "School Information"
+  },
+  {
+   "fieldname": "salutation",
+   "fieldtype": "Select",
+   "label": "Salutation",
+   "options": "Mr.\nMrs.\nMs.\nDr.\nProf.\nRev.\nEng.\nOther"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "school_department",
+   "fieldtype": "Data",
+   "label": "School Department"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-03 23:24:57.217050",
+ "modified": "2026-08-04 08:25:53.594652",
  "modified_by": "Administrator",
  "module": "Internship Management",
  "name": "Supervisor",

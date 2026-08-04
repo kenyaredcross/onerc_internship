@@ -18,7 +18,10 @@ class Supervisor(Document):
 		gender: DF.Literal["Female", "Male", "Other"]
 		institution: DF.Link | None
 		phone_number: DF.Data | None
+		salutation: DF.Literal["Mr.", "Mrs.", "Ms.", "Dr.", "Prof.", "Rev.", "Eng.", "Other"]
+		school_department: DF.Data | None
 		supervisor_name: DF.Data | None
+		title: DF.Data | None
 	# end: auto-generated types
 
 	_DOCTYPE_NAME = "Supervisor"

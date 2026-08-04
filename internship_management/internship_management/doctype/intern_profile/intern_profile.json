@@ -12,34 +12,42 @@
   "amended_from",
   "first_name",
   "email_address",
+  "date_of_birth",
   "gender",
   "emergency_contact_name",
+  "relationship",
+  "emergency_email_address",
   "column_break_wsvf",
   "last_name",
   "phone_number",
+  "national_idpassport_number",
   "physical_address",
   "emergency_contact_phone_number",
   "academic_information_tab",
   "education_section",
   "school_information",
   "course",
+  "current_academic_level",
   "column_break_cnxo",
   "start_date_of_study",
   "expected_graduation_date",
   "internship_information_tab",
   "placement_details_section",
-  "internship_type",
   "internship_start_date",
   "internship_end_date",
+  "internship_type",
   "column_break_pxor",
   "assigned_department",
-  "assigned_branch",
   "supervisor",
+  "assigned_branch",
+  "region",
+  "county",
   "required_documents_tab",
   "supporting_documents_section",
-  "national_id__passport_copy",
   "school_introduction_letter",
   "insurance_cover",
+  "national_id__passport_copy",
+  "student_id_copy",
   "column_break_yanb",
   "curriculum_vitae_cv",
   "academic_transcript",
@@ -79,13 +87,15 @@
   {
    "fieldname": "email_address",
    "fieldtype": "Data",
-   "label": "Email Address"
+   "label": "Email Address",
+   "reqd": 1
   },
   {
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
-   "options": "Female\nMale\nOthers"
+   "options": "Female\nMale\nOthers",
+   "reqd": 1
   },
   {
    "fieldname": "emergency_contact_name",
@@ -99,12 +109,14 @@
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "label": "Last Name"
+   "label": "Last Name",
+   "reqd": 1
   },
   {
    "fieldname": "phone_number",
    "fieldtype": "Data",
-   "label": "Phone Number"
+   "label": "Phone Number",
+   "reqd": 1
   },
   {
    "fieldname": "physical_address",
@@ -159,7 +171,8 @@
    "fieldname": "internship_type",
    "fieldtype": "Select",
    "label": "Internship Type",
-   "options": "Internship\nIndustrial Attachment"
+   "options": "Industrial Attachment\nInternship\nCommunity Service",
+   "reqd": 1
   },
   {
    "fieldname": "internship_start_date",
@@ -184,7 +197,7 @@
   {
    "fieldname": "assigned_branch",
    "fieldtype": "Link",
-   "label": "Assigned Branch",
+   "label": "Office",
    "options": "Branch"
   },
   {
@@ -205,7 +218,7 @@
   {
    "fieldname": "school_introduction_letter",
    "fieldtype": "Attach",
-   "label": "School Introduction Letter"
+   "label": "Institution Letter"
   },
   {
    "fieldname": "insurance_cover",
@@ -277,26 +290,70 @@
    "fieldname": "school_information",
    "fieldtype": "Link",
    "label": "Institution",
-   "options": "School Information"
+   "options": "School Information",
+   "reqd": 1
   },
   {
    "fieldname": "course",
    "fieldtype": "Link",
    "label": "Course",
-   "options": "Course"
+   "options": "Course",
+   "reqd": 1
   },
   {
    "fieldname": "supervisor",
    "fieldtype": "Link",
-   "label": "Supervisor",
+   "label": "Internship Supervisor",
    "options": "Supervisor"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth "
+  },
+  {
+   "fieldname": "national_idpassport_number",
+   "fieldtype": "Data",
+   "label": "National ID/Passport Number "
+  },
+  {
+   "fieldname": "current_academic_level",
+   "fieldtype": "Select",
+   "label": "Current Academic Level",
+   "options": "Certificate\nDiploma\nHigher Diploma\nBachelor's Degree\nPostgraduate Diploma\nMaster's Degree\nPhD\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "label": "Relationship"
+  },
+  {
+   "fieldname": "emergency_email_address",
+   "fieldtype": "Data",
+   "label": "Emergency Email Address"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region"
+  },
+  {
+   "fieldname": "county",
+   "fieldtype": "Data",
+   "label": "County"
+  },
+  {
+   "fieldname": "student_id_copy",
+   "fieldtype": "Attach",
+   "label": "Student ID Copy"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-08-03 23:31:20.459575",
+ "modified": "2026-08-04 09:10:43.128391",
  "modified_by": "Administrator",
  "module": "Internship Management",
  "name": "Intern Profile",

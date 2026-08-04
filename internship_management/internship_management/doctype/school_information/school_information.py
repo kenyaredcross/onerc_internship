@@ -14,11 +14,17 @@ class SchoolInformation(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		email: DF.Data | None
+		alternative_phone_number: DF.Data | None
+		city__town: DF.Data | None
+		email_address: DF.Data | None
 		institution_code: DF.Data | None
-		institution_name: DF.Data | None
+		institution_name: DF.Data
 		institution_type: DF.Literal["Private", "Public"]
+		logo: DF.AttachImage | None
 		phone_number: DF.Data | None
+		physical_address: DF.SmallText | None
+		postal_address: DF.Data | None
+		registration_number: DF.Data | None
 		website: DF.Data | None
 	# end: auto-generated types
 
