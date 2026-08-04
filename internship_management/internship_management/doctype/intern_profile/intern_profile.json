@@ -16,13 +16,13 @@
   "gender",
   "emergency_contact_name",
   "relationship",
-  "emergency_email_address",
   "column_break_wsvf",
   "last_name",
   "phone_number",
   "national_idpassport_number",
   "physical_address",
   "emergency_contact_phone_number",
+  "emergency_email_address",
   "academic_information_tab",
   "education_section",
   "school_information",
@@ -39,7 +39,7 @@
   "column_break_pxor",
   "assigned_department",
   "supervisor",
-  "assigned_branch",
+  "office",
   "region",
   "county",
   "required_documents_tab",
@@ -195,12 +195,6 @@
    "options": "Department"
   },
   {
-   "fieldname": "assigned_branch",
-   "fieldtype": "Link",
-   "label": "Office",
-   "options": "Branch"
-  },
-  {
    "fieldname": "required_documents_tab",
    "fieldtype": "Tab Break",
    "label": "Required Documents"
@@ -258,7 +252,7 @@
    "fieldname": "internship_expectations",
    "fieldtype": "Table",
    "label": "Internship Expectations",
-   "options": "Internship Expectation"
+   "options": "Internship Expectations"
   },
   {
    "fieldname": "status_tab",
@@ -340,20 +334,27 @@
   },
   {
    "fieldname": "county",
-   "fieldtype": "Data",
-   "label": "County"
+   "fieldtype": "Link",
+   "label": "County",
+   "options": "Branch"
   },
   {
    "fieldname": "student_id_copy",
    "fieldtype": "Attach",
    "label": "Student ID Copy"
+  },
+  {
+   "fieldname": "office",
+   "fieldtype": "Data",
+   "label": "Office",
+   "options": "Branch"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-08-04 09:10:43.128391",
+ "modified": "2026-08-04 09:48:00.991471",
  "modified_by": "Administrator",
  "module": "Internship Management",
  "name": "Intern Profile",
