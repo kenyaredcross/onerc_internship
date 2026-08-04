@@ -13,12 +13,17 @@ class InternProfile(Document):
 
 	if TYPE_CHECKING:
 		from frappe.types import DF
-		from internship_management.internship_management.doctype.internship_expectations.internship_expectations import InternshipExpectations
+		from internship_management.internship_management.doctype.additional_comment.additional_comment import AdditionalComment
+		from internship_management.internship_management.doctype.career_objective.career_objective import CareerObjective
+		from internship_management.internship_management.doctype.learning_expectation.learning_expectation import LearningExpectation
+		from internship_management.internship_management.doctype.skill_to_acquire.skill_to_acquire import SkilltoAcquire
 
 		academic_transcript: DF.Attach | None
 		active: DF.Check
+		additional_comment: DF.Table[AdditionalComment]
 		amended_from: DF.Link | None
 		assigned_department: DF.Link | None
+		career_objective: DF.Table[CareerObjective]
 		county: DF.Link | None
 		course: DF.Link
 		current_academic_level: DF.Literal["Certificate", "Diploma", "Higher Diploma", "Bachelor's Degree", "Postgraduate Diploma", "Master's Degree", "PhD", "Other"]
@@ -31,22 +36,25 @@ class InternProfile(Document):
 		expected_graduation_date: DF.Date | None
 		first_name: DF.Data
 		gender: DF.Literal["Female", "Male", "Others"]
+		identification_type: DF.Literal["National ID", "Passport"]
 		insurance_cover: DF.Attach | None
 		internship_end_date: DF.Date | None
-		internship_expectations: DF.Table[InternshipExpectations]
 		internship_start_date: DF.Date | None
 		internship_type: DF.Literal["Industrial Attachment", "Internship", "Community Service"]
 		last_name: DF.Data
+		learning_expectation: DF.Table[LearningExpectation]
 		national_id__passport_copy: DF.Attach | None
-		national_idpassport_number: DF.Data | None
+		national_id_number: DF.Data | None
 		office: DF.Data | None
 		other_supporting_documents: DF.Attach | None
+		passport_number: DF.Data | None
 		phone_number: DF.Data
 		physical_address: DF.SmallText | None
 		region: DF.Data | None
 		relationship: DF.Data | None
 		school_information: DF.Link
 		school_introduction_letter: DF.Attach | None
+		skill_to_acquire: DF.Table[SkilltoAcquire]
 		start_date_of_study: DF.Date | None
 		status: DF.Literal["Pending", "Assigned", "Active", "Completed", "Terminated"]
 		student_id_copy: DF.Attach | None

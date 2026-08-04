@@ -10,17 +10,21 @@
   "basic_information_tab",
   "section_break_8and",
   "first_name",
-  "amended_from",
-  "phone_number",
-  "national_idpassport_number",
+  "identification_type",
+  "national_id_number",
+  "passport_number",
   "email_address",
-  "gender",
   "date_of_birth",
-  "relationship",
+  "amended_from",
   "column_break_wsvf",
   "last_name",
+  "phone_number",
+  "gender",
   "physical_address",
+  "section_break_ezxo",
   "emergency_contact_name",
+  "relationship",
+  "column_break_eser",
   "emergency_contact_phone_number",
   "emergency_email_address",
   "academic_information_tab",
@@ -30,18 +34,19 @@
   "current_academic_level",
   "column_break_cnxo",
   "start_date_of_study",
-  "expected_graduation_date",
   "internship_information_tab",
   "placement_details_section",
-  "internship_start_date",
-  "internship_end_date",
-  "internship_type",
   "column_break_pxor",
   "assigned_department",
   "supervisor",
   "office",
   "region",
   "county",
+  "column_break_sioc",
+  "internship_start_date",
+  "internship_end_date",
+  "internship_type",
+  "expected_graduation_date",
   "required_documents_tab",
   "supporting_documents_section",
   "school_introduction_letter",
@@ -53,8 +58,10 @@
   "academic_transcript",
   "other_supporting_documents",
   "internship_expectations_tab",
-  "expectations_section",
-  "internship_expectations",
+  "learning_expectation",
+  "skill_to_acquire",
+  "additional_comment",
+  "career_objective",
   "status_tab",
   "internship_status_section",
   "status",
@@ -119,9 +126,10 @@
    "reqd": 1
   },
   {
+   "description": "E.g  twinplaza, 7th ,Eastleigh",
    "fieldname": "physical_address",
    "fieldtype": "Small Text",
-   "label": "Physical Address"
+   "label": "Physical Address "
   },
   {
    "fieldname": "emergency_contact_phone_number",
@@ -244,17 +252,6 @@
    "label": "Internship Expectations"
   },
   {
-   "fieldname": "expectations_section",
-   "fieldtype": "Section Break",
-   "label": "Expectations"
-  },
-  {
-   "fieldname": "internship_expectations",
-   "fieldtype": "Table",
-   "label": "Internship Expectations",
-   "options": "Internship Expectations"
-  },
-  {
    "fieldname": "status_tab",
    "fieldtype": "Tab Break",
    "label": "Status"
@@ -306,11 +303,6 @@
    "label": "Date of Birth "
   },
   {
-   "fieldname": "national_idpassport_number",
-   "fieldtype": "Data",
-   "label": "National ID/Passport Number "
-  },
-  {
    "fieldname": "current_academic_level",
    "fieldtype": "Select",
    "label": "Current Academic Level",
@@ -347,13 +339,68 @@
    "fieldname": "office",
    "fieldtype": "Data",
    "label": "Office"
+  },
+  {
+   "fieldname": "section_break_ezxo",
+   "fieldtype": "Section Break",
+   "label": "Emergency info"
+  },
+  {
+   "fieldname": "column_break_eser",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "identification_type",
+   "fieldtype": "Select",
+   "label": " Identification Type",
+   "options": "National ID\nPassport"
+  },
+  {
+   "depends_on": "eval:doc.identification_type==\"National ID\"",
+   "fieldname": "national_id_number",
+   "fieldtype": "Data",
+   "label": "National ID Number"
+  },
+  {
+   "depends_on": "eval:doc.identification_type==\"Passport\"",
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport Number"
+  },
+  {
+   "fieldname": "learning_expectation",
+   "fieldtype": "Table",
+   "label": "Learning Expectation",
+   "options": "Learning Expectation"
+  },
+  {
+   "fieldname": "career_objective",
+   "fieldtype": "Table",
+   "label": "Career Objective",
+   "options": "Career Objective"
+  },
+  {
+   "fieldname": "skill_to_acquire",
+   "fieldtype": "Table",
+   "label": "Skill to Acquire",
+   "options": "Skill to Acquire"
+  },
+  {
+   "fieldname": "additional_comment",
+   "fieldtype": "Table",
+   "label": "Additional Comment",
+   "options": "Additional Comment"
+  },
+  {
+   "fieldname": "column_break_sioc",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-08-04 11:00:30.463568",
+ "modified": "2026-08-04 14:27:51.769915",
  "modified_by": "Administrator",
  "module": "Internship Management",
  "name": "Intern Profile",

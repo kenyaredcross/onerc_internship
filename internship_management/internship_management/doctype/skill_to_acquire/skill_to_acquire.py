@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class InternshipExpectations(Document):
+class SkilltoAcquire(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,13 +14,10 @@ class InternshipExpectations(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		additional_comment: DF.SmallText | None
-		career_objective: DF.SmallText | None
-		learning_expectation: DF.SmallText | None
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
-		skill_to_acquire: DF.Data | None
+		skill_to_acquire: DF.SmallText | None
 	# end: auto-generated types
 
-	_DOCTYPE_NAME = "Internship Expectations"
+	_DOCTYPE_NAME = "Skill to Acquire"
