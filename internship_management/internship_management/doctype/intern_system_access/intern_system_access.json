@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "autoname = hash",
+ "creation": "2026-08-04 21:17:11.995268",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "system_name",
+  "column_break_lyfz",
+  "access_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "system_name",
+   "fieldtype": "Data",
+   "label": "System Name"
+  },
+  {
+   "fieldname": "column_break_lyfz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "access_status",
+   "fieldtype": "Select",
+   "label": "Access Status",
+   "options": "Active\nDeactivated\nNot Applicable"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-04 21:19:00.876649",
+ "modified_by": "Administrator",
+ "module": "Internship Management",
+ "name": "Intern System Access",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
