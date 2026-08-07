@@ -1,34 +1,32 @@
 {
  "actions": [],
- "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "COUR-.YYYY.-.#####",
- "creation": "2026-08-03 23:00:26.601767",
+ "autoname": "field:course_name",
+ "creation": "2026-08-07 00:00:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "course_details_section",
   "course_name",
-  "academic_level",
-  "column_break_zrhk",
   "course_code",
-  "duration_years"
+  "institution",
+  "column_break_kbqk",
+  "department",
+  "course_duration_months"
  ],
  "fields": [
   {
+   "fieldname": "course_details_section",
+   "fieldtype": "Section Break",
+   "label": "Course Details"
+  },
+  {
    "fieldname": "course_name",
    "fieldtype": "Data",
-   "label": "Course Name"
-  },
-  {
-   "fieldname": "academic_level",
-   "fieldtype": "Select",
-   "label": "Academic Level",
-   "options": "Certificate\nDiploma\nHigher Diploma\nBachelor's Degree\nPostgraduate Diploma\nMaster's Degree\nDoctorate (PhD)\nOther"
-  },
-  {
-   "fieldname": "column_break_zrhk",
-   "fieldtype": "Column Break"
+   "in_list_view": 1,
+   "label": "Course Name",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "course_code",
@@ -36,24 +34,37 @@
    "label": "Course Code"
   },
   {
-   "fieldname": "duration_years",
-   "fieldtype": "Int",
-   "label": "Duration (Years)"
+   "fieldname": "institution",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Institution",
+   "options": "Institution",
+   "reqd": 1
   },
   {
-   "fieldname": "course_details_section",
-   "fieldtype": "Section Break",
-   "label": "Course Details"
+   "fieldname": "column_break_kbqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "course_duration_months",
+   "fieldtype": "Int",
+   "label": "Course Duration (Months)"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-03 23:02:35.814482",
+ "modified": "2026-08-07 00:00:00.000000",
  "modified_by": "Administrator",
  "module": "Internship Management",
  "name": "Course",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -71,7 +82,7 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
- "sort_field": "creation",
+ "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
 }

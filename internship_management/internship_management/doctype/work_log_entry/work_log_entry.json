@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-08-06 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "day",
+  "check_in",
+  "check_out",
+  "hours_worked",
+  "task_assigned",
+  "activities_done",
+  "challenges",
+  "skills_learned",
+  "attendance_status",
+  "supervisor_comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Day"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Check In"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Check Out"
+  },
+  {
+   "fieldname": "hours_worked",
+   "fieldtype": "Data",
+   "label": "Hours Worked"
+  },
+  {
+   "fieldname": "task_assigned",
+   "fieldtype": "Small Text",
+   "label": "Task Assigned"
+  },
+  {
+   "fieldname": "activities_done",
+   "fieldtype": "Small Text",
+   "label": "Activities Done"
+  },
+  {
+   "fieldname": "challenges",
+   "fieldtype": "Small Text",
+   "label": "Challenges"
+  },
+  {
+   "fieldname": "skills_learned",
+   "fieldtype": "Small Text",
+   "label": "Skills Learned"
+  },
+  {
+   "fieldname": "attendance_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Attendance Status",
+   "options": "Present\nAbsent\nLeave\nHoliday"
+  },
+  {
+   "fieldname": "supervisor_comment",
+   "fieldtype": "Small Text",
+   "label": "Supervisor Comment"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-06 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Internship Management",
+ "name": "Work Log Entry",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
+

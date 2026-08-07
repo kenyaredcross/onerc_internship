@@ -1,11 +1,10 @@
 # Copyright (c) 2026, sumeya bishar and contributors
 # For license information, please see license.txt
 
-# import frappe
 from frappe.model.document import Document
 
 
-class Course(Document):
+class OnboardingResource(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,11 +13,14 @@ class Course(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		course_code: DF.Data | None
-		course_duration_months: DF.Int | None
-		course_name: DF.Data
-		department: DF.Link | None
-		institution: DF.Link
+		description: DF.Data | None
+		issued_date: DF.Date | None
+		parent: DF.Data
+		parentfield: DF.Data
+		parenttype: DF.Data
+		resource_type: DF.Literal["Laptop", "Access Card", "Other"]
+		returned: DF.Check
+		serial_number: DF.Data | None
 	# end: auto-generated types
 
-	_DOCTYPE_NAME = "Course"
+	_DOCTYPE_NAME = "Onboarding Resource"

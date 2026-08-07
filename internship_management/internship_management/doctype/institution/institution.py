@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class Course(Document):
+class Institution(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,11 +14,11 @@ class Course(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		course_code: DF.Data | None
-		course_duration_months: DF.Int | None
-		course_name: DF.Data
-		department: DF.Link | None
-		institution: DF.Link
+		contact_email: DF.Data | None
+		contact_person: DF.Data | None
+		contact_phone: DF.Data | None
+		institution_code: DF.Data | None
+		institution_name: DF.Data
 	# end: auto-generated types
 
-	_DOCTYPE_NAME = "Course"
+	_DOCTYPE_NAME = "Institution"
